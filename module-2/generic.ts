@@ -21,6 +21,10 @@ const userList: GenericArray<{ name: string, age: number }> = [ // Array of obje
 ];
 
 // In tuple
+interface IUser {
+    name: string;
+    age: number;
+}
 
 type GenericTuple<X, Y> = [X, Y]; // Generic type, X and Y are placeholders
-const userUsingGenericTuple : GenericTuple<number, { name: string, age: number }> = [1, { name: 'John', age: 20 }]; 
+const userUsingGenericTuple : GenericTuple<number, IUser> = [1, { name: 'John', age: 20 }]; 
